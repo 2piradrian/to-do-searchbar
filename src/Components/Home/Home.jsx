@@ -14,7 +14,7 @@ function Home() {
 	const tasks = useSelector((state) => state.tasks);
 	const dispatch = useDispatch();
 
-	const { inProgress, finished } = useTasks();
+	const { inProgress, finished, types } = useTasks();
 
 	return (
 		<>
@@ -49,7 +49,10 @@ function Home() {
 					</Title>
 				</TitleContainer>
 				<ScrolleableCard>
-					<Progress />
+					{types.length > 0 &&
+						types.map((task) => {
+							return <Progress {...task} key={task.name} />;
+						})}
 				</ScrolleableCard>
 			</TaskContainer>
 			{modal && <ModalForm />}
