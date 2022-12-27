@@ -14,6 +14,7 @@ export const SearchBox = styled.div`
 
 export const SearchInput = styled.input`
 	width: 600px;
+	max-width: 80%;
 	height: 40px;
 	padding: 0px 15px;
 	outline: none;
