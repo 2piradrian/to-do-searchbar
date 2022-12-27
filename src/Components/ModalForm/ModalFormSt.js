@@ -15,6 +15,7 @@ export const ModalContainer = styled.div`
 export const TaskForm = styled.form`
 	height: 75%;
 	width: 65%;
+	min-width: 400px;
 	border-radius: 12px;
 	padding: 50px;
 	position: absolute;
@@ -23,6 +24,7 @@ export const TaskForm = styled.form`
 	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.secondaryBackground};
+	border: 1px solid ${(props) => props.theme.contrast};
 `;
 
 export const ModalTitle = styled.h2`

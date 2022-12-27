@@ -37,5 +37,4 @@ export const ProgressBar = styled.div`
 	min-width: 3%;
 	border-radius: 8px;
 	background: linear-gradient(to right, #f12711, #f5af19);
-	z-index: 10;
 `;
