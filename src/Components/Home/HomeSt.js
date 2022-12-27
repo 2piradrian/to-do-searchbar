@@ -14,6 +14,9 @@ export const TaskCardContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 1000px) {
+		flex-direction: column;
+	}
 `;
 
 export const TitleContainer = styled.div`

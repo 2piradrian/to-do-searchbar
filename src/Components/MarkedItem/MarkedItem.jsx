@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useMark } from "../../Hooks/useMark";
 import { delete_task, finish_task } from "../../Redux/Actions/creators";
 import { ReadyIcon, TrashIcon } from "../Task/TaskSt";

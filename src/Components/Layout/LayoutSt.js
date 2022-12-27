@@ -9,4 +9,9 @@ export const Main = styled.main`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 1000px) {
+		height: auto;
+		max-height: none;
+		justify-content: start;
+	}
 `;
