@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaTrashAlt } from "react-icons/fa";
+import { GoCheck } from "react-icons/go";
 
 export const TaskBox = styled.div`
 	height: 60px;
@@ -34,5 +35,10 @@ export const TaskDate = styled.p`
 
 export const TrashIcon = styled(FaTrashAlt)`
 	font-size: 18px;
+	cursor: pointer;
+`;
+
+export const ReadyIcon = styled(GoCheck)`
+	font-size: 25px;
 	cursor: pointer;
 `;
