@@ -1,5 +1,21 @@
 import styled from "styled-components";
 
+export const HomeContainer = styled.section`
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+`;
+
+export const TaskCardContainer = styled.div`
+	width: 100%;
+	padding: 30px 0px;
+	margin-top: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
 export const TitleContainer = styled.div`
 	height: 20%;
 	width: 100%;
