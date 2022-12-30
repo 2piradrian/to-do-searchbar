@@ -6,6 +6,7 @@ import { ReadyIcon, TaskBox, TaskContent, TaskDate, TaskName, TrashIcon } from "
 function Task(props) {
 	const { name, day, category, status } = props;
 	const dispatch = useDispatch();
+
 	return (
 		<TaskBox>
 			<TaskContent>

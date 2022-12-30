@@ -18,6 +18,11 @@ function MarkedItem(props) {
 		setQuery("");
 	};
 
+	const handleFinish = () => {
+		const task = { ...props, inputRef: null };
+		dispatch(finish_task(task));
+	};
+
 	return (
 		<ItemBox onClick={handleClose}>
 			<ItemName>
@@ -26,7 +31,7 @@ function MarkedItem(props) {
 				{right}
 			</ItemName>
 			{status === "inProgress" ? (
-				<ReadyIcon onClick={() => dispatch(finish_task(props))} />
+				<ReadyIcon onClick={() => handleFinish()} />
 			) : (
 				<TrashIcon onClick={() => dispatch(delete_task(props))} />
 			)}

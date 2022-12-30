@@ -12,9 +12,11 @@ export const tasksReducer = (state = taskList, action) => {
 			saveLocalStorage("taskList", state);
 			return state;
 		case FINISH_TASK:
+			console.log(payload);
 			state = state.filter((item) => item.id !== payload.id);
 			state = [...state, { ...payload, status: "finished" }];
 			saveLocalStorage("taskList", state);
+			console.log(state);
 			return state;
 		case DELETE_TASK:
 			state = state.filter((item) => item.id !== payload.id);
