@@ -6,14 +6,20 @@ import { ReadyIcon, TrashIcon } from "../Task/TaskSt";
 import { ItemBox, ItemName } from "./MarkedItemSt";
 
 function MarkedItem(props) {
-	const { query, status } = props;
+	const { query, status, inputRef, setQuery } = props;
 
-	const marks = useMark(props, query);
+	const marks = useMark(props, query.toLowerCase());
 	const dispatch = useDispatch();
 
 	const { left, center, right } = useMemo(() => marks);
+
+	const handleClose = () => {
+		inputRef.current.value = "";
+		setQuery("");
+	};
+
 	return (
-		<ItemBox>
+		<ItemBox onClick={handleClose}>
 			<ItemName>
 				{left}
 				<span style={{ backgroundColor: "yellow", color: "black" }}>{center}</span>
